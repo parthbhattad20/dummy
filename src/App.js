@@ -33,25 +33,25 @@ const App = () => {
       </div>
 
       {/* Main Content */}
-      <div className="bg-white p-8 rounded-lg shadow-lg z-10 max-w-md text-center">
+      <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg z-10 max-w-md w-11/12 text-center">
         <h1 className="text-2xl font-bold text-gray-800">
           Hi Khushi! 🌙
         </h1>
-        <p className="text-gray-700 mt-4">
+        <p className="text-gray-700 mt-4 text-sm md:text-base">
           I really enjoy talking to you and would love to spend a night under the moon and stars with you. 🌟 Everything we talked about yesterday felt so magical!
         </p>
-        <p className="text-gray-700 mt-4">
+        <p className="text-gray-700 mt-4 text-sm md:text-base">
           I believe in you and know you’ll achieve everything you dream of. You’re amazing!
         </p>
-        <div className="mt-6 flex items-center justify-center space-x-4">
+        <div className="mt-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
           <button
-            className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+            className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition w-40 md:w-auto"
             onClick={() => setShowPopup(true)}
           >
             Yes ❤️
           </button>
           <button
-            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg cursor-pointer"
+            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-lg cursor-pointer w-40 md:w-auto"
             style={{ position: "absolute", top: noButtonPosition.top, left: noButtonPosition.left }}
             onMouseEnter={moveNoButton}
           >
@@ -63,11 +63,11 @@ const App = () => {
       {/* Popup */}
       {showPopup && (
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-20">
-          <div className="bg-white p-6 rounded-lg text-center">
+          <div className="bg-white p-6 md:p-8 rounded-lg text-center max-w-md w-11/12">
             <h2 className="text-xl font-bold text-pink-500">
               I really enjoy talking to you a lot! ❤️
             </h2>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 mt-4 text-sm md:text-base">
               You make my days brighter, and I can't wait to spend more magical moments with you.
             </p>
             <button
